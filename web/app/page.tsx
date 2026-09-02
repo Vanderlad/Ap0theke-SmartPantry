@@ -215,7 +215,7 @@ export default function Home() {
           <article className="shopping-card">
             <p className="eyebrow">AUTOMATIC LIST</p><h2>Buy next</h2>
             {shoppingList.length ? <ul>{shoppingList.map(({ name }) => <li key={name}><span>{name}</span><span>{grams(inventory[name])} left</span></li>)}</ul> : <p className="empty-state">Your pantry is comfortably stocked.</p>}
-            <button className="primary-button">View shopping list</button>
+            <p className="shopping-note">Updates automatically below 25% full.</p>
           </article>
           <article className="how-card"><p className="eyebrow">NEXT HARDWARE STEP</p><h2>Connect the real pantry</h2><p>When your Uno is connected by USB, use the button above. This dashboard will send recipe commands and read its JSON status messages.</p></article>
         </aside>
