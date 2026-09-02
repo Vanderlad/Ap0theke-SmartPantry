@@ -12,6 +12,8 @@ selected recipe and whether enough is available.
 - LCD recipe/status display and three-button control
 - Six recipes with gram-based ingredient requirements
 - Low-stock detection and Serial JSON status output
+- First browser dashboard in `web/`, with recipe selection, inventory levels,
+  automatic low-stock list, and optional Web Serial support for a USB Arduino
 
 ## How it works today
 
@@ -36,3 +38,4 @@ identify ingredients that are low overall.
 - `diagram.json` — Wokwi circuit diagram
 - `platformio.ini` — PlatformIO configuration
 - `wokwi.toml` — Wokwi firmware configuration
+- `web/` — browser dashboard prototype (requires Node.js 22 or newer)
