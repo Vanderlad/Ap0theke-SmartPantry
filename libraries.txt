@@ -1,0 +1,6 @@
+# Wokwi Library List
+# https://docs.wokwi.com/guides/libraries
+
+LiquidCrystal I2C
+Adafruit NeoPixel
+HX711 Arduino Library

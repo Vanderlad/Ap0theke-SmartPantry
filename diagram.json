@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "author": "Vlad",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 40,
+      "left": 20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -40,
+      "left": 350,
+      "attrs": {
+        "pins": "i2c",
+        "i2cAddress": "0x27",
+        "background": "blue",
+        "color": "white"
+      }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "hx7111",
+      "top": 125,
+      "left": 390,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "sauceScale",
+      "top": 125,
+      "left": 530,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "riceScale",
+      "top": 250,
+      "left": 390,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "beansScale",
+      "top": 250,
+      "left": 530,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "previousButton",
+      "top": 340,
+      "left": 20,
+      "attrs": {
+        "label": "PREV",
+        "key": "ArrowLeft",
+        "color": "blue",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "nextButton",
+      "top": 340,
+      "left": 125,
+      "attrs": {
+        "label": "NEXT",
+        "key": "ArrowRight",
+        "color": "green",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "selectButton",
+      "top": 340,
+      "left": 230,
+      "attrs": {
+        "label": "SELECT",
+        "key": "Enter",
+        "color": "yellow",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-led-strip",
+      "id": "pantryLEDs",
+      "top": 440,
+      "left": 300,
+      "attrs": {
+        "pixels": "4",
+        "pixelShape": "circle",
+        "pixelSize": "5050"
+      }
+    }
+  ],
+  "connections": [
+    ["uno:5V", "lcd1:VCC", "red", []],
+    ["uno:GND.2", "lcd1:GND", "black", []],
+    ["uno:A4", "lcd1:SDA", "green", []],
+    ["uno:A5", "lcd1:SCL", "blue", []],
+
+    ["uno:5V", "hx7111:VCC", "red", []],
+    ["uno:GND.2", "hx7111:GND", "black", []],
+    ["uno:6", "hx7111:DT", "green", []],
+    ["uno:5", "hx7111:SCK", "blue", []],
+
+    ["uno:5V", "sauceScale:VCC", "red", []],
+    ["uno:GND.2", "sauceScale:GND", "black", []],
+    ["uno:8", "sauceScale:DT", "green", []],
+    ["uno:7", "sauceScale:SCK", "blue", []],
+
+    ["uno:5V", "riceScale:VCC", "red", []],
+    ["uno:GND.2", "riceScale:GND", "black", []],
+    ["uno:10", "riceScale:DT", "green", []],
+    ["uno:11", "riceScale:SCK", "blue", []],
+
+    ["uno:5V", "beansScale:VCC", "red", []],
+    ["uno:GND.2", "beansScale:GND", "black", []],
+    ["uno:12", "beansScale:DT", "green", []],
+    ["uno:13", "beansScale:SCK", "blue", []],
+
+    ["uno:2", "previousButton:1.l", "blue", []],
+    ["previousButton:2.l", "uno:GND.1", "black", []],
+    ["uno:3", "nextButton:1.l", "green", []],
+    ["nextButton:2.l", "uno:GND.1", "black", []],
+    ["uno:4", "selectButton:1.l", "gold", []],
+    ["selectButton:2.l", "uno:GND.1", "black", []],
+
+    ["uno:5V", "pantryLEDs:VDD", "red", []],
+    ["uno:GND.3", "pantryLEDs:VSS", "black", []],
+    ["uno:9", "pantryLEDs:DIN", "purple", []]
+  ],
+  "serialMonitor": {
+    "display": "auto",
+    "newline": "lf"
+  }
+}
