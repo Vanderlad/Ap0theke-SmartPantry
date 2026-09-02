@@ -12,8 +12,8 @@ selected recipe and whether enough is available.
 - LCD recipe/status display and three-button control
 - Six recipes with gram-based ingredient requirements
 - Low-stock detection and Serial JSON status output
-- First browser dashboard in `web/`, with recipe selection, inventory levels,
-  automatic low-stock list, and optional Web Serial support for a USB Arduino
+- Had codex create and host a temporary testing dashboard qhich you can find under "web/",
+   with recipe selection, inventory levels, automatic low-stock list, and optional Web Serial support for a USB Arduino
 
 <img width="2066" height="1175" alt="PreWebApp" src="https://github.com/user-attachments/assets/7fc5531d-46dd-46ba-b8ca-056061b876c7" />
 <img width="2119" height="762" alt="Prototype4LoadCells" src="https://github.com/user-attachments/assets/4ce651b1-ed2b-4a1e-a130-0657275b0057" />
