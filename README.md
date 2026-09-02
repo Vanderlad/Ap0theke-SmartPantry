@@ -1,7 +1,7 @@
 # Smart Pantry
 
 A Wokwi/Arduino prototype for a home smart-pantry system. Each ingredient is
-weighed with a load cell, and LEDs indicate which ingredients are needed for a
+weighed with a load cell, and LEDs to indicate which ingredients are needed for a
 selected recipe and whether enough is available.
 
 ## Current progress
@@ -12,13 +12,16 @@ selected recipe and whether enough is available.
 - LCD recipe/status display and three-button control
 - Six recipes with gram-based ingredient requirements
 - Low-stock detection and Serial JSON status output
+<img width="2066" height="1175" alt="PreWebApp" src="https://github.com/user-attachments/assets/7fc5531d-46dd-46ba-b8ca-056061b876c7" />
+<img width="2119" height="762" alt="Prototype4LoadCells" src="https://github.com/user-attachments/assets/4ce651b1-ed2b-4a1e-a130-0657275b0057" />
 
 ## How it works today
 
 Use Previous/Next to choose a recipe and Select to turn recipe mode on or off.
-In recipe mode, green LEDs mark ingredients with enough stock; red LEDs mark
+In recipe mode, green LEDs mark ingredients with enough stock, red LEDs mark
 ingredients that are required but insufficient. Outside recipe mode, red LEDs
-identify ingredients that are low overall.
+identify ingredients that are low overall. The idea is that each ingredient has a
+diode that lights up underneath.
 
 ## To do
 
